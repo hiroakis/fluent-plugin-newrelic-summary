@@ -69,7 +69,7 @@ module Fluent
 
     def emit_data(data)
       log.trace "in_newrelic_summary: emit_data"
-      Engine.emit("#{tag}", Engine.now, data)
+      router.emit("#{tag}", Engine.now, data)
     end
   end
 end
